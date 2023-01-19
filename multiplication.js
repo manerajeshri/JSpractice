@@ -1,49 +1,47 @@
 
-function multiplication(num1,num2) {
-    let mul =0 
+// ===========================================================// Method 1 : using for loop
+
+function mul(nm1,nm2) {
+    const num1 =Math.abs(nm1);
+    const num2 =Math.abs(nm2);
+    let mul =0 ;
     for (let i = 1; i <= num2; i++) {
         mul = mul + num1 ;        
     }
-    return mul
+    return (nm1<0 && nm2>0 || nm2<0 && nm1>0)? `${nm1} * ${nm2} =  ${-mul}` : `${nm1} * ${nm2} =  ${mul}`
 }
-console.log(`Multiplication (5,0) = `,multiplication(5,0));
+// ========================================================== Method 2 : using Division
 
-console.log(`Multiplication (5,6) = `,multiplication(5,6));
-
-console.log(`Multiplication (6,6) = `,multiplication(6,6));
-
-console.log(`Multiplication (6,7) = `,multiplication(6,7));
-
-console.log(`Multiplication (0,7) = `,multiplication(0,7));
-
-
-
-console.log(`\nMethod 2] using do while`);
-// simple 
-
-let result = 0;
-let counter =0;
-function operation (num1, num2) {
-
-    do {
-      result = result+num1;
-      counter++;
-
-    } while (counter<num2);
+// function mul(num1,num2) {
     
-    // console.log(result);
-    return result
+//     return (num2==0||num1==0) ? `Multiplication of ${num1} & ${num2} = ${0}` : `Multiplication of ${num1} & ${num2} = ${(num1/(1/num2))} `
+// }
 
-}
+console.log( mul(-9,-7));
+console.log(mul(-9,7));
+console.log(mul(9,-7));
+console.log(mul(9,7));
+console.log(mul(9,0));
+console.log(mul(0,7));
+console.log(mul(-9,0));
+console.log(mul(0,-7));
 
-// operation(7,-8);
 
-console.log(`Multiplication (5,0) = `,operation(5,0));
+// ===========================================================// Method 3 : using do while
+// console.log(`\nMethod 3] using do while`);
+// // simple 
 
-console.log(`Multiplication (5,6) = `,operation(5,6));
+// let result = 0;
+// let counter =0;
+// function operation (num1, num2) {
 
-console.log(`Multiplication (6,6) = `,operation(6,6));
+//     do {
+//       result = result+num1;
+//       counter++;
 
-console.log(`Multiplication (6,7) = `,operation(6,7));
+//     } while (counter<num2);
+    
+//     // console.log(result);
+//     return result
 
-console.log(`Multiplication (0,7) = `,operation(0,7));
+// }
