@@ -1,13 +1,23 @@
 // https://www.tutorialstonight.com/js/javascript-star-pattern
 
 
-// pyramid of star
 console.log(`1] pyramid of star`);
 let string =" ";
-for (let index = 0; index < 5; index++) {
+for (let index = 5; index >0; index--) {// no of lines count == row count
   string += "*"
   console.log(string);
 }
+
+
+
+
+// pyramid of star
+// console.log(`1] pyramid of star`);
+// let string =" ";
+// for (let index = 0; index < 5; index++) {// no of lines
+//   string += "*"
+//   console.log(string);
+// }
 
 // console.log(`2] pyramid of star`);
 // let string1 =" ";
