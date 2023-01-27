@@ -1,32 +1,58 @@
+// I am getting correct output, but its repeated, that is for single number it should show the occurance only once, its showing as many times the number occurs
 
-// find occurance of no 
-// find repeated no
-let array = [1,2,2,3,3,3,4,4,4,4,5,6,6,7,9999,7];
+// repeted num / occurance
 
-console.log(array);
-console.log(typeof(array)); // object
+function occuranceOfNumber(num,givenarray) {
+    let count=0;
+for (let i = 0; i < givenarray.length; i++) {
+    if (num===givenarray[i]) {
+        count++
+    }
+}
+console.log(`1] The array is : [${givenarray}] The number ${num} is occured ${count} times in array`);
+}
+occuranceOfNumber(3,[1,3,4,5,6,7,3,3,3]);
 
-let largest = array[0];
-   for (let i = 1; i < array.length; i++) {
-      if (array[i] > largest)
-      largest = array[i];
-   }
- console.log(largest);
+// repeted num / occurance with index
 
-array.forEach(element => {
-    // console.log(element);
-});
+function occuranceOfNumberwithIndex(num,givenarray) {
+    let count=0; let indexArray =[];
+for (let i = 0; i < givenarray.length; i++) {
+    if (num===givenarray[i]) {
+        count++;
+        indexArray.push(i)
+    }
+}
+count == 0 ? console.log(`2] The array is : [${givenarray}] The number ${num} is occured ${count} times in array`) : console.log(`2] The array is : [${givenarray}] The number ${num} is occured ${count} times in array at index ${indexArray}`);
+}
+occuranceOfNumberwithIndex(3,[3,3,4,5,6,7,3,3,3]);
+occuranceOfNumberwithIndex(10,[3,3,4,5,6,7,3,3,3]);
+occuranceOfNumberwithIndex("a",[3,3,4,5,6,7,3,3,3,"a"]);
 
+// occurance using filter
+console.log(`\n occuranceOfAllNumbers in array using filter`);
+function occuranceOfAllNumbers(array) {
+ let largest = array[0];
+for (let i = 0; i < array.length; i++) {
+    if (array[i]>largest) {
+        largest=array[i]
+    }
+}
 for (let i = 0; i <=largest; i++) {
     let a = array.filter(x => x===i).length;
     if (a !=0) {
         console.log(`The number is ${i} and it occurarce ${a} Times`);
     }
-    
 }
+}
+    occuranceOfAllNumbers([1,46,2,2,77,3,3,3,46,55]);
 
+
+    // occurance with include 
+    console.log(`\n  occurance with include `);
+let array=[1,7,90,65]
 function IsNumberIncludes(num) {
-    
+   
     if (array.includes(num)== true) {
           
        let count = array.filter(b => b === num ).length;
@@ -34,5 +60,44 @@ function IsNumberIncludes(num) {
          
     }
 }
-
 IsNumberIncludes(7);
+
+// console.clear();
+// occurance of all number in array using loop
+
+console.log(` occurance of all number in array using loop`);
+function occurance(givenarray) {
+    // finding largest
+    let largest =givenarray[0];
+        for (let i = 1; i < givenarray.length; i++) {
+            if (givenarray[i]>largest) {
+                largest = givenarray[i]
+            }   
+        }
+// occurance
+let count=0; 
+for (let i = 0; i < largest; i++) {
+    let num = givenarray[i]
+    for (let j = 0; j < givenarray.length; j++) {
+        if (givenarray[j] === num ) {
+        count++;
+        }
+    }
+    if (num != undefined) {
+        console.log(`num ${num} occurance ${count}`);
+        count =0   
+    }  
+}
+}
+occurance([11,2,33,44,11,555,2]);
+
+
+
+
+
+
+
+
+
+
+
