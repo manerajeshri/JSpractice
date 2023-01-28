@@ -1,4 +1,3 @@
-// I am getting correct output, but its repeated, that is for single number it should show the occurance only once, its showing as many times the number occurs
 
 // repeted num / occurance
 
@@ -80,7 +79,10 @@ for (let i = 0; i < largest; i++) {
     let num = givenarray[i]
     for (let j = 0; j < givenarray.length; j++) {
         if (givenarray[j] === num ) {
-        count++;
+            if (givenarray[j] != null) {
+                givenarray[j]= null;
+                count++;
+            }
         }
     }
     if (num != undefined) {
@@ -89,15 +91,4 @@ for (let i = 0; i < largest; i++) {
     }  
 }
 }
-occurance([11,2,33,44,11,555,2]);
-
-
-
-
-
-
-
-
-
-
-
+occurance([56,1,11,2,56,33,44,11,56,555,2]);
