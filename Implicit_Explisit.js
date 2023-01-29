@@ -43,8 +43,17 @@ console.log(result);
  
 // arithmetic operation of undefined with number , boolaen or null gives NaN
 
+result = 4 + undefined;
+console.log(result);
 
+result = 4 - undefined;
+console.log(result);
 
+result = true + undefined;
+console.log(result);
+
+result = null + undefined;
+console.log(result);
 
 
 
