@@ -28,7 +28,17 @@ occuranceOfNumberwithIndex(3,[3,3,4,5,6,7,3,3,3]);
 occuranceOfNumberwithIndex(10,[3,3,4,5,6,7,3,3,3]);
 occuranceOfNumberwithIndex("a",[3,3,4,5,6,7,3,3,3,"a"]);
 
-// occurance using filter
+console.log(`\n  occurance with filter `);
+let array1=[1,7,90,65]
+function IsNumberIncludes(num) {
+            
+       let count = array1.filter(b => b === num ).length;
+        console.log(`The number is ${num} and its occurarce ${count} Time`);  
+         
+    }
+IsNumberIncludes(7);
+
+// occurance using filter from array all element
 console.log(`\n occuranceOfAllNumbers in array using filter`);
 function occuranceOfAllNumbers(array) {
  let largest = array[0];
