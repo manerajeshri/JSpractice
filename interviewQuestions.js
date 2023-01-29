@@ -52,7 +52,7 @@
     // console.log(`after redeclaration with let: `, carName); 
     // SyntaxError: Identifier 'carName' has already been declared
 
-// == and ===
+// == and === IMP
 console.log(`\n == and ===`);
 if (5 == "5") {
   console.log(`5 == "5" ===> true as JS tries to convert to same data type and compare`);
@@ -66,6 +66,29 @@ if (5 === "5") {
 } else {
   console.log(`5 === "5" ===> false as its types are different`);
 }
+
+// ===================== find with reason IMP
+
+console.log(`1] 0=='' ==>`,0 =='',": Reason both values are same ");
+console.log(`2] 0=='0' ==>`,0 =='0',": Reason both values are same == convert data type and compare ");
+console.log(`3] 0==false ==>`,0 ==false,": Reason both values are same ");
+console.log(`4] null == undefined ==>`,null == undefined,": Reason both values are same ");
+console.log(`5] 1==[1] ==>`,1==[1],": Reason both values are same ");
+console.log(`6] 1==true ==>`,1==true,": Reason both values are same ");
+console.log(`7] 1=='1' ==>`,1=='1',": Reason both values are same ");
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
