@@ -28,7 +28,7 @@ result = 4 + false ;
 console.log(result);
 
 // numeric string used with - , / , * result number
-
+console.log(`3] numeric string used with - , / , * result number`);
 result = '4' - '2';
 console.log(result);
 
