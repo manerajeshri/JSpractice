@@ -1,3 +1,4 @@
+// object
 //METHOD==> function as value
 console.log(`METHOD==> function as value`);
 const person ={
