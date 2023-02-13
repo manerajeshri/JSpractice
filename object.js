@@ -93,3 +93,11 @@ console.log(Object.values(person));
 // in operator ==> tocheck property exist or not in object
 console.log(`in operator ==> tocheck property exist or not in object`);
 console.log("age" in person); // true
+
+
+// getting all entries , keys and values
+console.log(`getting all entries , keys and values`);
+
+console.log(`Object.entries(personObj) :`, Object.entries(personObj));
+console.log(`Object.keys(personObj) :`, Object.keys(personObj));
+console.log(`Object.values(personObj) :`, Object.values(personObj));
